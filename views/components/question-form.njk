@@ -1,0 +1,44 @@
+<<<<<<< HEAD
+<form action="/quiz/end" method = "post">
+    <link rel="stylesheet" href="/css/style.css">
+    <div class="quiz">
+        
+        {% for question in questions %}
+        <h2>{{ question.text }}</h2>
+        <ul>
+            {% for answer in question.answers %}
+            <li>
+                <input type="radio"
+                name="{{question.id}}"
+                id="{{ question.id }}"
+                value="{{ answer }}">
+                <label for="answers">{{ answer }}</label>
+            </li>
+            {% endfor %}
+        </ul>
+        {% endfor %}
+    </div>
+    <div class="quiz">
+        <button type="submit">Skicka</button>
+    </div>
+ 
+=======
+<form action="/quiz/end" method="post">
+  {% for question in questions %}
+    <h2>{{ question.text }}</h2>
+    <ul>
+      {% for answer in question.answers %}
+        <li>
+          <input 
+            type="radio"
+            id="{{ question.id }}"
+            name="{{ question.id }}"
+            value="{{ answer }}">
+          <label for="answers">{{ answer }}</label>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+  <button type="submit">Skicka</button>
+>>>>>>> a846c8407dcedb31061b52e84c6d298bc6d59b3f
+</form>

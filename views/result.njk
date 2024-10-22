@@ -1,0 +1,24 @@
+{% extends "layout.njk" %}
+{% block content %}
+<<<<<<< HEAD
+<link rel="stylesheet" href="/css/style.css">
+<main class="container">
+    <div class="quiz">
+        <h1>{{message}}</h1>
+        {% for results in result %}
+            <h3>{{results.question}}</h3>
+            <h5>Ditt svar: {{results.answer}}</h5>
+            <h5>Korrekt svar: {{results.correct}}</h5>
+        {% endfor %}
+    </div>
+    <div class="quiz">
+        <p><a href="/quiz/">Gör quizzet igen</a></p>
+    </div>
+=======
+<main class="container">
+  <h1>{{message}}</h1>
+    <pre>{{ result | dump(2) }}</pre>
+    <p><a href="/quiz/">Gör quizzet igen</a></p>
+>>>>>>> a846c8407dcedb31061b52e84c6d298bc6d59b3f
+</main>
+{% endblock %}
